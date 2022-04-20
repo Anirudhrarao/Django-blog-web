@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% block blogactive %} active  {% endblock %}
+{% block title %}
+Blog - Home
+{% endblock title %}
+{% block body %}
+<div class="container my-3">
+    <h2>𝐒𝐞𝐚𝐫𝐜𝐡 𝐑𝐞𝐬𝐮𝐥𝐭𝐬:</h2>
+    {% if allpost|length < 1 %}
+      <div class="container">
+        <div class="alert alert-dark" role="alert">
+          <p>Your search:<strong>{{query}}</strong> did not match</p>
+          <ul>
+            suggestions:
+            <li>Make sure that all words are spelled correctly.</li>
+            <li>Try different keywords.</li>
+            <li>Try more general keywords.</li>
+            <li>Try fewer keywords.</li>
+          </ul>
+        </div>
+      </div>
+    {% endif %}
+    {% comment %} {% for post in allpost  %}
+    <div class="card my-2 jumbotron">
+      <div class="col my-3 ">
+        <img class="rounded-circle" src="/media/{{post.img}}" alt="Generic placeholder image" width="140" height="140">
+        <strong class="text-primary">{{post.author}}</strong>
+        <h2>{{post.title}}</h2>
+        <div class="mb-1 text-muted">{{post.TimeStamps}}</div>
+        <p>{{post.content|truncatewords_html:30|safe}}</p>
+        <a href="/blog/{{post.slug}}" role="button" class="btn btn-primary my-2">Continue reading</a>
+      </div> 
+    </div>
+    {% endfor %} {% endcomment %}
+    {% for post in allpost %}
+    <!-- News jumbotron -->
+<div class="jumbotron text-center hoverable p-4">
+
+<!-- Grid row -->
+<div class="row">
+
+  <!-- Grid column -->
+  <div class="col-md-4 offset-md-1 mx-3 my-3">
+
+    <!-- Featured image -->
+    <div class="view overlay">
+      <img src="/media/{{post.img}}" class="img-fluid w-50" alt="Sample image for first version of blog listing">
+      <a>
+        <div class="mask rgba-white-slight"></div>
+      </a>
+    </div>
+
+  </div>
+  <!-- Grid column -->
+
+  <!-- Grid column -->
+  <div class="col-md-7 text-md-left ml-3 mt-3">
+
+    <h4 class="h4 mb-4">{{post.title}}</h4>
+    <p class="font-weight-normal">by <a><strong>{{post.author}}</strong></a>, {{post.TimeStamps}}</p>
+
+    <a href="/blog/{{post.slug}}" class="btn btn-primary">Read more</a>
+
+  </div>
+  <!-- Grid column -->
+
+</div>
+<!-- Grid row -->
+
+</div>
+<!-- News jumbotron -->
+  {% endfor %}
+
+</div>
+{% endblock body %}

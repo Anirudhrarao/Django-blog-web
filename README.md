@@ -11,10 +11,10 @@
     content management systems,
     and online word processors
 * **FEATURE'S** :
-  *Searching functionality
-  *Commenting
-  *Rich Editor
-  *Login and Register
+  * Searching functionality
+  * Commenting
+  * Rich Editor
+  * Login and Register
     
 ![Thankyou](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm3oP0MC6NU0XyOsjxCepjikvmDQmvMra22A&usqp=CAU)
 

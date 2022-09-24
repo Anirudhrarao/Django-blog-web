@@ -2,7 +2,7 @@ from django.shortcuts import render,HttpResponse,redirect
 from blog.models import Post,BlogComments
 from django.contrib import messages
 from django.contrib.auth.models import User
-from blog.templatetags import extras
+# from blog.templatetags import extras
 # Create your views here.
 def bloghome(request):
     allpost = Post.objects.all()
@@ -38,3 +38,6 @@ def postComment(request):
             messages.success(request,"Your reply has been posted succesfully")
         
     return redirect(f"/blog/{post.slug}")
+
+
+    

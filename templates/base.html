@@ -262,7 +262,7 @@ footer {
               <a class="nav-link" href="/about">About</a>
             </li>
             <li class="nav-item {% block contactactive %}  {% endblock %} ">
-              <a class="nav-link" href="/contact">Contact</a>
+              <a class="nav-link" href="{% url 'contact' %}">Contact</a>
             </li> 
             <li class="nav-item {% block blogactive %}  {% endblock %} ">
               <a class="nav-link" href="/blog">Blog</a>
@@ -287,7 +287,7 @@ footer {
                 Welcome {{request.user}}
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="/logout">Logout</a>
+                <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
             </li>
           </ul>
           {% else %}

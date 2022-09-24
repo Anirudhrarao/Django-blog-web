@@ -20,13 +20,13 @@ STATIC_DIR = os.path.join(BASE_DIR,'static')
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ['SECRET_KEY']
-
+# SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY = 'django-insecure-_+x#$^7)gpsp@56yaralx&_2fai+xw=r1j2t&6ubpfz*su)5+6'
 # SECURITY WARNING: don't run with debug turned on in production! 
-DEBUG = False
+DEBUG = True
 # EMAIL_USE_SSL = False
-ALLOWED_HOSTS = ["techblogweb84.herokuapp.com", "localhost"]
-
+# ALLOWED_HOSTS = ["techblogweb84.herokuapp.com", "localhost"]
+ALLOWED_HOSTS = []
 
 # Application definition
 

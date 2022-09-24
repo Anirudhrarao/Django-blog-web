@@ -1,16 +1,20 @@
 # Django-blog-web
 **This is blogging web made out of django framewrok and tiny mce editor**
 
-
-* **FRAMEWORK** :
+* **PROGRAMMING LANG :**
+  * HTML
+  * PYTHON
+  * JAVASCRIPT 
+* **FRAMEWORK :** 
   * Django
-* **LIBRARY** :
+  * Bootstrap
+* **LIBRARY :**
   * Tiny Mce Editor :
     TinyMCE is one of the world's most advanced rich text editors.
     It's used 'under the hood' on thousands of different kinds of platforms such as email management systems,
     content management systems,
     and online word processors
-* **FEATURE'S** :
+* **FEATURE'S :**
   * Searching functionality
   * Commenting
   * Rich Editor
